@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import CocktailCard from "./CocktailCard";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useOnline from "../utils/useOnline";
 const Body = () => {
+    const isOnline = useOnline();
     const [cocktail, setCocktail] = useState([]);
     async function getCocktail() {
         const data = await fetch(
@@ -15,6 +17,9 @@ const Body = () => {
         getCocktail();
     }, []);
 
+    if (!isOnline) {
+        return <h5>You are OFFLINE Please check your internet connection</h5>;
+    }
     if (cocktail.length == 0) {
         return <Shimmer />;
     }
