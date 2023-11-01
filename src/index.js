@@ -82,7 +82,7 @@ const appRouter = createBrowserRouter([
 
     {
         path: "*",
-        element: <Shimmer />
+        element: <About />
     }
 ]);
 
