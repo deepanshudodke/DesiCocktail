@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DesiCocktail/static/css/main.ca5b2610.css",
-    "main.js": "/DesiCocktail/static/js/main.fabdba35.js",
+    "main.js": "/DesiCocktail/static/js/main.503197bd.js",
     "index.html": "/DesiCocktail/index.html",
     "main.ca5b2610.css.map": "/DesiCocktail/static/css/main.ca5b2610.css.map",
-    "main.fabdba35.js.map": "/DesiCocktail/static/js/main.fabdba35.js.map"
+    "main.503197bd.js.map": "/DesiCocktail/static/js/main.503197bd.js.map"
   },
   "entrypoints": [
     "static/css/main.ca5b2610.css",
-    "static/js/main.fabdba35.js"
+    "static/js/main.503197bd.js"
   ]
 }
