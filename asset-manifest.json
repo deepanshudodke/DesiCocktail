@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DesiCocktail/static/css/main.ca5b2610.css",
+    "main.js": "/DesiCocktail/static/js/main.71b632e0.js",
+    "index.html": "/DesiCocktail/index.html",
+    "main.ca5b2610.css.map": "/DesiCocktail/static/css/main.ca5b2610.css.map",
+    "main.71b632e0.js.map": "/DesiCocktail/static/js/main.71b632e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca5b2610.css",
+    "static/js/main.71b632e0.js"
+  ]
+}
