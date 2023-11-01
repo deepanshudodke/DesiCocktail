@@ -14,6 +14,7 @@ import IngredientCard from "./components/IngredientCard";
 import { Provider } from "react-redux";
 import store from "./utils/Store";
 import Cart from "./components/Cart";
+import Shimmer from "./components/Shimmer";
 const AppLayout = () => {
     return (
         <Provider store={store}>
@@ -25,7 +26,7 @@ const AppLayout = () => {
 
 const appRouter = createBrowserRouter([
     {
-        path: "*",
+        path: "/",
         element: <AppLayout />,
         children: [
             {
@@ -77,6 +78,11 @@ const appRouter = createBrowserRouter([
                 element: <Cart />
             }
         ]
+    },
+
+    {
+        path: "*",
+        element: <Shimmer />
     }
 ]);
 
