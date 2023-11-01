@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 const Header = () => {
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
     return (
         <>
             <div className="header">
@@ -34,9 +37,18 @@ const Header = () => {
                 </ul>
 
                 <ul className="sign-in">
-                    <li style={{ paddingTop: 5 }}>
-                        <box-icon type="solid" name="cart-alt"></box-icon>
+                    <li className="cart">
+                        <li style={{ paddingTop: 5 }}>
+                            <Link to={"cart"}>
+                                <box-icon
+                                    type="solid"
+                                    name="cart-alt"
+                                ></box-icon>
+                            </Link>
+                        </li>
+                        <li> - {cartItems.length} items</li>
                     </li>
+
                     <li>Signin</li>
                     <li>Signup</li>
                 </ul>

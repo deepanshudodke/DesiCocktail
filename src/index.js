@@ -11,13 +11,15 @@ import About from "./components/About";
 import CategoryCard from "./components/CategoryCard";
 import Cocktail from "./components/Cocktail";
 import IngredientCard from "./components/IngredientCard";
-
+import { Provider } from "react-redux";
+import store from "./utils/Store";
+import Cart from "./components/Cart";
 const AppLayout = () => {
     return (
-        <>
+        <Provider store={store}>
             <Header />
             <Outlet />
-        </>
+        </Provider>
     );
 };
 
@@ -69,6 +71,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/cocktail/:id",
                 element: <Cocktail />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             }
         ]
     }

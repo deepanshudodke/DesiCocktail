@@ -55,16 +55,17 @@ a {
 }
 .sign-in {
     display: flex;
-    /* border: 1px solid black; */
     align-items: center;
 }
 
 .sign-in > li {
-    /* border: 1px solid black; */
-
+    align-items: center;
     margin-inline: 10px;
 }
 
+.cart {
+    display: flex;
+}
 .main-body {
     margin-inline: 20px;
     margin-top: 25px;
@@ -239,4 +240,26 @@ h5 {
 
 .single-cocktail > .second > h4 > span {
     font-weight: 400;
+}
+
+.add-item-btn {
+    margin-top: 20px;
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #00d775, #00bd68);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+
+    height: 44px;
+
+    text-align: center;
+
+    width: 20%;
+    border: 0;
+}
+
+.add-item-btn:hover {
+    background: #00bd68;
 }

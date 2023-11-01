@@ -1,5 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cocktail = () => {
     const { id } = useParams();
@@ -18,6 +20,11 @@ const Cocktail = () => {
         getCocktail();
     }, []);
 
+    const dispatch = useDispatch();
+
+    const addCocktail = (cocktail) => {
+        dispatch(addItem(cocktail));
+    };
     if (cocktail.length === 0) return <h5 className="loader">Loading.....</h5>;
 
     return (
@@ -42,6 +49,12 @@ const Cocktail = () => {
                         <h4>
                             INSTRUCTION: <span>{cocktail.strInstructions}</span>
                         </h4>
+                        <button
+                            className="add-item-btn"
+                            onClick={() => addCocktail(cocktail)}
+                        >
+                            Add Item
+                        </button>
                     </div>
                 </div>
             </div>
